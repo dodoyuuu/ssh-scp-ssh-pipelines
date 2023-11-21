@@ -161,19 +161,19 @@ def processes():
     if not INPUT_FIRST_SSH:
         print("SSH-SCP-SSH no first_ssh input found")
     else:
-        print("+++++++++++++++++++Pipeline: RUNNING FIRST SSH+++++++++++++++++++")
+        # print("+++++++++++++++++++Pipeline: RUNNING FIRST SSH+++++++++++++++++++")
         connect(lambda c: ssh_process(c, INPUT_FIRST_SSH))
 
     if not INPUT_SCP:
         print("SSH-SCP-SSH no scp input found")
     else:
-        print("+++++++++++++++++++Pipeline: RUNNING SCP+++++++++++++++++++")
+        # print("+++++++++++++++++++Pipeline: RUNNING SCP+++++++++++++++++++")
         connect(lambda c: scp_process(c, INPUT_SCP))
 
     if not INPUT_LAST_SSH:
         print("SSH-SCP-SSH no last_ssh input found")
     else:
-        print("+++++++++++++++++++Pipeline: RUNNING LAST SSH+++++++++++++++++++")
+        # print("+++++++++++++++++++Pipeline: RUNNING LAST SSH+++++++++++++++++++")
         connect(lambda c: ssh_process(c, INPUT_LAST_SSH))
 
     pass
